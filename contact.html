@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Emberly — Seattle Coffee Lab &amp; Showroom</title>
+  <meta name="description" content="Get in touch with the Emberly bench team. Inquire about equipment calibration, track demo orders, or visit our Seattle roastery and gear showroom." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Phosphor Icons CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- Accessible Skip-to-Content Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========================================================================
+       MASTER NAVIGATION HEADER
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Emberly Homepage">
+        <span class="brand-logo-mark"><i class="ph ph-coffee"></i></span>
+        <span>Emberly</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <div class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </div>
+        <div class="nav-item">
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-item dropdown">
+          <a href="services.html" class="nav-link">
+            Services <i class="ph ph-caret-down" style="font-size: 0.85rem;"></i>
+          </a>
+          <ul class="nav-dropdown-menu" aria-label="Services Submenu">
+            <li>
+              <a href="services.html#shop" class="dropdown-link">
+                <i class="ph ph-storefront"></i>
+                <span>Gear Shop &amp; Filters</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html#consultations" class="dropdown-link">
+                <i class="ph ph-chats-circle"></i>
+                <span>Brew Consultations</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html#servicing" class="dropdown-link">
+                <i class="ph ph-wrench"></i>
+                <span>Equipment Servicing</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html#subscriptions" class="dropdown-link">
+                <i class="ph ph-repeat"></i>
+                <span>Bean &amp; Filter Subscriptions</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html#shipping-returns" class="dropdown-link">
+                <i class="ph ph-truck"></i>
+                <span>Shipping &amp; Returns Policy</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-item">
+          <a href="contact.html" class="nav-link active" aria-current="page">Contact</a>
+        </div>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="cart-btn-trigger" id="cart-nav-trigger" aria-label="Open Cart Drawer" title="Open Cart">
+          <i class="ph ph-shopping-bag"></i>
+          <span class="cart-badge-count tabular-nums" id="cart-nav-badge" style="display: none;">0</span>
+        </button>
+
+        <a href="auth.html" class="btn btn-secondary btn-sm nav-auth-btn" id="nav-auth-link">
+          <i class="ph ph-sign-in"></i> Login
+        </a>
+
+        <button type="button" class="menu-toggle-btn" aria-label="Toggle Navigation Menu">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-nav-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-logo-mark"><i class="ph ph-coffee"></i></span>
+        <span>Emberly</span>
+      </a>
+      <button type="button" class="drawer-close-btn" aria-label="Close Mobile Navigation">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <ul class="mobile-nav-links">
+      <li class="mobile-nav-item">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="about.html" class="mobile-nav-link">About</a>
+      </li>
+      <li class="mobile-nav-item">
+        <button type="button" class="mobile-nav-link mobile-accordion-toggle" aria-expanded="false">
+          <span>Services</span>
+          <i class="ph ph-caret-down"></i>
+        </button>
+        <ul class="mobile-sub-menu">
+          <li><a href="services.html#shop" class="mobile-sub-link"><i class="ph ph-storefront"></i> Gear Shop &amp; Filters</a></li>
+          <li><a href="services.html#consultations" class="mobile-sub-link"><i class="ph ph-chats-circle"></i> Brew Consultations</a></li>
+          <li><a href="services.html#servicing" class="mobile-sub-link"><i class="ph ph-wrench"></i> Equipment Servicing</a></li>
+          <li><a href="services.html#subscriptions" class="mobile-sub-link"><i class="ph ph-repeat"></i> Subscriptions</a></li>
+          <li><a href="services.html#shipping-returns" class="mobile-sub-link"><i class="ph ph-truck"></i> Shipping &amp; Returns</a></li>
+        </ul>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="contact.html" class="mobile-nav-link" style="color: var(--color-accent); font-weight: 700;">Contact</a>
+      </li>
+    </ul>
+
+    <div class="mobile-nav-footer">
+      <a href="auth.html" class="btn btn-primary" id="mobile-auth-btn" style="width: 100%;">
+        <i class="ph ph-user"></i> Login / My Account
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       MAIN CONTACT CONTENT
+       ======================================================================== -->
+  <main id="main-content">
+    <!-- SECTION 1: PAGE HERO -->
+    <section class="page-hero" aria-labelledby="contact-hero-title">
+      <div class="container">
+        <span class="eyebrow" style="color: var(--color-accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.82rem;">
+          Direct Access to Our Lab
+        </span>
+        <h1 id="contact-hero-title">Connect with the Emberly Coffee Lab.</h1>
+        <p>
+          Whether you need advice dial-in support, custom commercial machinery calibration, or order status assistance, our bench engineers respond directly.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 2: VALIDATED ENQUIRY FORM & DIRECT CONTACT CARDS -->
+    <section class="section" aria-labelledby="enquiry-heading">
+      <div class="container" style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-12); align-items: start;">
+        <!-- Left: Validated Enquiry Form -->
+        <div style="background: var(--color-secondary-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space-8); box-shadow: var(--shadow);">
+          <h2 id="enquiry-heading" style="font-size: 1.65rem; margin-bottom: 8px;">Send a Direct Lab Enquiry</h2>
+          <p style="font-size: 0.9rem; margin-bottom: 24px;">
+            Fields marked with <span style="color: var(--color-error);">*</span> are required. We maintain a strict 4-hour weekday response protocol.
+          </p>
+
+          <!-- Formspree / Netlify forms placeholder action attribute -->
+          <form id="contact-enquiry-form" action="https://formspree.io/f/placeholder_emberly" method="POST" novalidate>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Full Name <span class="required">*</span></label>
+                <input type="text" id="contact-name" name="name" class="form-input" required placeholder="Julian Keller" />
+                <div class="form-feedback"></div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email Address <span class="required">*</span></label>
+                <input type="email" id="contact-email" name="email" class="form-input" required placeholder="julian@example.com" />
+                <div class="form-feedback"></div>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+              <div class="form-group">
+                <label class="form-label" for="contact-phone">Phone Number (Optional)</label>
+                <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="+1 (555) 000-0000" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-order-num">Demo Order # (Optional)</label>
+                <input type="text" id="contact-order-num" name="order_number" class="form-input" placeholder="e.g. EMB-90412" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-topic">Enquiry Topic <span class="required">*</span></label>
+              <select id="contact-topic" name="topic" class="form-select" required>
+                <option value="">Select a subject...</option>
+                <option value="order-support">Order Support &amp; Tracking</option>
+                <option value="brew-consultation">Brew Consultation Questions</option>
+                <option value="equipment-servicing">Equipment Servicing &amp; Burr Alignment</option>
+                <option value="wholesale">Wholesale &amp; Roastery Accounts</option>
+                <option value="other">General Technical Inquiries</option>
+              </select>
+              <div class="form-feedback"></div>
+            </div>
+
+            <div class="form-group">
+              <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <label class="form-label" for="contact-message">Your Message <span class="required">*</span></label>
+                <span id="contact-char-count" class="tabular-nums" style="font-size: 0.78rem; color: var(--color-text-muted);">0 / 500 characters</span>
+              </div>
+              <textarea id="contact-message" name="message" class="form-textarea" rows="5" maxlength="500" required placeholder="Describe your equipment question, water chemistry, or grinder setup..."></textarea>
+              <div class="form-feedback"></div>
+            </div>
+
+            <!-- Mandatory Consent Checkbox that blocks submit -->
+            <div class="form-group">
+              <label class="form-check">
+                <input type="checkbox" id="contact-consent" name="consent" required />
+                <span class="form-check-label">
+                  I consent to Emberly processing my message details in accordance with lab privacy standards. <span class="required">*</span>
+                </span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 8px;">
+              <i class="ph ph-paper-plane-tilt"></i> Send Message to Lab
+            </button>
+          </form>
+
+          <!-- Inline Success Banner -->
+          <div id="contact-success-banner" style="display: none; background: #EBF5EE; border: 1px solid var(--color-success); border-radius: var(--radius); padding: 24px; text-align: center;">
+            <i class="ph ph-check-circle" style="font-size: 3rem; color: var(--color-success); margin-bottom: 12px; display: inline-block;"></i>
+            <h3 style="color: var(--color-success); margin-bottom: 8px;">Enquiry Successfully Dispatched!</h3>
+            <p style="font-size: 0.95rem; margin-bottom: 8px;">
+              Thank you for reaching out. A bench technician will inspect your message and respond within 4 hours.
+            </p>
+            <span style="font-size: 0.8rem; color: var(--color-text-muted);">
+              Demo Submission: Formspree / Netlify Forms placeholder triggered.
+            </span>
+          </div>
+        </div>
+
+        <!-- Right: Contact Details & Direct Hotline Cards -->
+        <div style="display: flex; flex-direction: column; gap: var(--space-6);">
+          <div style="background: var(--color-secondary-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space-6); box-shadow: var(--shadow);">
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--color-accent-subtle); color: var(--color-accent-hover); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; flex-shrink: 0;">
+                <i class="ph ph-envelope-simple"></i>
+              </div>
+              <div>
+                <h4 style="margin-bottom: 4px;">Laboratory Support Desk</h4>
+                <p style="font-size: 0.9rem; margin-bottom: 6px;">
+                  <a href="mailto:support@emberlylab.com" style="color: var(--color-primary); font-weight: 600;">support@emberlylab.com</a>
+                </p>
+                <span class="badge badge-stock">Average Response: &lt; 4 Hours</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: var(--color-secondary-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space-6); box-shadow: var(--shadow);">
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--color-accent-subtle); color: var(--color-accent-hover); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; flex-shrink: 0;">
+                <i class="ph ph-phone-call"></i>
+              </div>
+              <div>
+                <h4 style="margin-bottom: 4px;">Direct Bench Line</h4>
+                <p style="font-size: 0.9rem; margin-bottom: 6px;">
+                  <a href="tel:+12065550194" class="tabular-nums" style="color: var(--color-primary); font-weight: 600;">+1 (206) 555-0194</a>
+                </p>
+                <span style="font-size: 0.8rem; color: var(--color-text-muted);">
+                  Monday &ndash; Friday 8:00 AM &ndash; 6:00 PM PST
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Self-Service Links Card -->
+          <div style="background: var(--color-secondary); border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space-6);">
+            <h4 style="margin-bottom: 12px; font-size: 1.1rem;">Quick Self-Service Solutions</h4>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <button type="button" class="btn btn-secondary btn-sm" style="justify-content: flex-start;" onclick="if(window.EmberlyAccount) EmberlyAccount.openDrawer('pane-orders'); else window.location.href='auth.html';">
+                <i class="ph ph-magnifying-glass"></i> Track an Active Demo Order
+              </button>
+              <a href="services.html#shipping-returns" class="btn btn-secondary btn-sm" style="justify-content: flex-start;">
+                <i class="ph ph-truck"></i> Review Shipping &amp; Returns Policy
+              </a>
+              <a href="services.html#faq" class="btn btn-secondary btn-sm" style="justify-content: flex-start;">
+                <i class="ph ph-question"></i> Browse Equipment FAQ
+              </a>
+            </div>
+          </div>
+
+          <!-- Follow Us Card -->
+          <div class="contact-follow-card">
+            <h4>Follow Us</h4>
+            <p>Brew tips, lab drops and behind-the-bench stories.</p>
+            <div class="contact-social-row">
+              <a href="#" class="contact-social-btn" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+              <a href="#" class="contact-social-btn" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+              <a href="#" class="contact-social-btn" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+              <a href="#" class="contact-social-btn" aria-label="X (Twitter)"><i class="ph ph-x-logo"></i></a>
+              <a href="#" class="contact-social-btn" aria-label="Pinterest"><i class="ph ph-pinterest-logo"></i></a>
+              <a href="#" class="contact-social-btn" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: ROASTERY & SHOWROOM LOCATION BLOCK -->
+    <section class="section section-alt" aria-labelledby="location-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Pacific Northwest Laboratory</span>
+          <h2 id="location-heading">Visit Our Seattle Showroom &amp; Tasting Bar</h2>
+          <p>
+            Experience our 64mm flat-burr grinders and dual-boiler flow profilers in person. Complimentary cuppings held every Saturday morning.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-8); align-items: center;">
+          <!-- Google Maps Iframe Placeholder -->
+          <div style="border-radius: var(--radius); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow); height: 380px; position: relative;">
+            <iframe
+              title="Emberly Seattle Roastery Map Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86064.20573981882!2d-122.40428459424683!3d47.61317462118465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ab6b1225723%3A0xd65e85d43c915e70!2sDowntown%20Seattle%2C%20Seattle%2C%20WA!5e0!3m2!1sen!2sus!4v1697190000000!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <!-- Location & Hours Details -->
+          <div style="background: var(--color-secondary-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space-8); box-shadow: var(--shadow);">
+            <span class="badge badge-accent" style="margin-bottom: 8px;">Public Tasting Bar Open</span>
+            <h3 style="font-size: 1.35rem; margin-bottom: 12px;">Emberly Bench Lab &amp; Tasting Bar</h3>
+            <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+              402 Pike Street, Suite 800<br />
+              Seattle, WA 98101<br />
+              United States
+            </p>
+
+            <div style="border-top: 1px solid var(--color-border); padding-top: 16px; margin-bottom: 16px;">
+              <h4 style="font-size: 0.95rem; margin-bottom: 8px;">Showroom Hours</h4>
+              <ul style="list-style: none; font-size: 0.88rem; display: flex; flex-direction: column; gap: 4px; color: var(--color-text-muted);">
+                <li style="display: flex; justify-content: space-between;">
+                  <span>Monday &ndash; Friday</span>
+                  <strong>8:00 AM &ndash; 6:00 PM</strong>
+                </li>
+                <li style="display: flex; justify-content: space-between;">
+                  <span>Saturday (Public Cuppings)</span>
+                  <strong>9:00 AM &ndash; 4:00 PM</strong>
+                </li>
+                <li style="display: flex; justify-content: space-between;">
+                  <span>Sunday</span>
+                  <em>Closed for Maintenance</em>
+                </li>
+              </ul>
+            </div>
+
+            <div style="background: var(--color-secondary); padding: 12px; border-radius: var(--radius); font-size: 0.82rem; color: var(--color-text-muted);">
+              <i class="ph ph-info"></i> All visits, cupping tables, and showroom hours listed are demo placeholders.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: CTA BANNER -->
+    <section class="section" aria-labelledby="contact-cta-heading">
+      <div class="container" style="text-align: center;">
+        <h2 id="contact-cta-heading" style="margin-bottom: 16px;">Ready to Test Drive Our Equipment?</h2>
+        <p style="max-width: 600px; margin: 0 auto 32px auto; font-size: 1.05rem;">
+          Explore our complete catalog in the online store, inspect 360-degree rotational tolerance views, or reserve a 1-on-1 virtual dial-in session.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="services.html#shop" class="btn btn-primary btn-lg">
+            <i class="ph ph-storefront"></i> Visit Gear Shop
+          </a>
+          <a href="services.html#consultations" class="btn btn-secondary btn-lg">
+            <i class="ph ph-calendar"></i> Book Brew Consultation
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       MASTER FOOTER
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="color: var(--color-secondary); margin-bottom: 12px;">
+            <span class="brand-logo-mark" style="background: var(--color-accent); color: #FFF;"><i class="ph ph-coffee"></i></span>
+            <span>Emberly</span>
+          </a>
+          <p>
+            Bench-calibrated coffee equipment for home baristas and roaster laboratories. Engineered for thermal stability, sub-micron uniformity, and enduring repairability.
+          </p>
+          <div class="footer-social-row">
+            <a href="#" class="footer-social-btn" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="Twitter / X"><i class="ph ph-x-logo"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About &amp; Testing Story</a></li>
+            <li><a href="services.html#shop">Specialty Gear Shop</a></li>
+            <li><a href="services.html#consultations">Brew Consultations</a></li>
+            <li><a href="contact.html">Contact &amp; Showroom</a></li>
+            <li><a href="auth.html">Account Login</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services &amp; Care</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#servicing">Burr Alignment &amp; Servicing</a></li>
+            <li><a href="services.html#subscriptions">Bean &amp; Filter Subscriptions</a></li>
+            <li><a href="services.html#shipping-returns">Shipping &amp; Returns Policy</a></li>
+            <li><a href="services.html#faq">Equipment FAQ &amp; Manuals</a></li>
+            <li><a href="contact.html">Track a Demo Order</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Seattle Bench Lab</h4>
+          <p>
+            402 Pike Street, Suite 800<br />
+            Seattle, WA 98101<br />
+            support@emberlylab.com<br />
+            +1 (206) 555-0194
+          </p>
+          <div style="font-size: 0.8rem; color: var(--color-accent);">
+            <i class="ph ph-clock"></i> Mon&ndash;Fri 8am&ndash;6pm PST
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-disclosure">
+          <strong>Disclosure:</strong> Emberly is a fictional specialty coffee demo brand created for demonstration purposes. All products, specifications, prices, stock levels, reviews, and testing claims are placeholder demo data.
+        </p>
+        <p class="footer-copyright">
+          &copy; 2026 Emberly Coffee Gear Lab. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer & Account Panel Modals -->
+  <div class="cart-drawer-backdrop" id="cart-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <h3><i class="ph ph-shopping-bag"></i> Your Lab Cart</h3>
+      <button type="button" class="drawer-close-btn" id="cart-close-btn" aria-label="Close Shopping Cart"><i class="ph ph-x"></i></button>
+    </div>
+    <div class="cart-drawer-body" id="cart-drawer-content"></div>
+    <div class="cart-drawer-footer" id="cart-drawer-footer"></div>
+  </aside>
+
+  <div class="account-drawer-backdrop" id="account-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="account-drawer" id="account-drawer" role="dialog" aria-modal="true" aria-label="My Account Panel">
+    <div class="account-drawer-header">
+      <h3 style="font-size: 1.35rem; display: flex; align-items: center; gap: 8px;"><i class="ph ph-user-circle"></i> My Account</h3>
+      <button type="button" class="drawer-close-btn" id="account-close-btn" aria-label="Close My Account Panel"><i class="ph ph-x"></i></button>
+    </div>
+    <div class="account-tabs-nav" role="tablist">
+      <button type="button" class="account-tab-btn active" data-target="pane-orders" role="tab">Orders</button>
+      <button type="button" class="account-tab-btn" data-target="pane-saved" role="tab">Saved Gear</button>
+      <button type="button" class="account-tab-btn" data-target="pane-subs" role="tab">Subscriptions</button>
+      <button type="button" class="account-tab-btn" data-target="pane-profile" role="tab">Profile</button>
+    </div>
+    <div class="account-drawer-body">
+      <div class="account-tab-pane active" id="pane-orders"><div id="account-orders-list"></div></div>
+      <div class="account-tab-pane" id="pane-saved"><div id="account-wishlist-grid"></div></div>
+      <div class="account-tab-pane" id="pane-subs"><div id="account-subscription-pane"></div></div>
+      <div class="account-tab-pane" id="pane-profile">
+        <form id="account-profile-form">
+          <div class="form-group"><label class="form-label" for="profile-name">Full Name</label><input type="text" id="profile-name" class="form-input" required /></div>
+          <div class="form-group"><label class="form-label" for="profile-email">Email Address</label><input type="email" id="profile-email" class="form-input" required /></div>
+          <div class="form-group"><label class="form-label" for="profile-street">Shipping Street</label><input type="text" id="profile-street" class="form-input" /></div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="form-group"><label class="form-label" for="profile-city">City</label><input type="text" id="profile-city" class="form-input" /></div>
+            <div class="form-group"><label class="form-label" for="profile-zip">Postal Code</label><input type="text" id="profile-zip" class="form-input" /></div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">Save Profile Changes</button>
+          <button type="button" class="btn btn-secondary" id="account-logout-btn" style="width: 100%; margin-top: 12px; color: var(--color-error);"><i class="ph ph-sign-out"></i> Sign Out of Demo Session</button>
+        </form>
+      </div>
+    </div>
+  </aside>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/viewer360.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/account.js"></script>
+  <script src="assets/js/contact.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

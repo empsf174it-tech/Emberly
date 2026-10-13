@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Emberly Warm Roasted Gradient -->
+    <linearGradient id="emberGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BA7339" />
+      <stop offset="48%" stop-color="#7D431F" />
+      <stop offset="100%" stop-color="#461E0A" />
+    </linearGradient>
+
+    <!-- Inset Rim Lighting Gradient -->
+    <linearGradient id="rimLight" x1="25%" y1="0%" x2="75%" y2="100%">
+      <stop offset="0%" stop-color="#FFF3E3" stop-opacity="0.42" />
+      <stop offset="50%" stop-color="#FFF3E3" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#1A0A04" stop-opacity="0.45" />
+    </linearGradient>
+
+    <!-- Golden Ember Spark Gradient -->
+    <linearGradient id="emberSpark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF1D0" />
+      <stop offset="50%" stop-color="#F7BA63" />
+      <stop offset="100%" stop-color="#D97A2B" />
+    </linearGradient>
+
+    <!-- Crema Surface Gradient -->
+    <linearGradient id="cremaGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C27838" />
+      <stop offset="50%" stop-color="#E1A162" />
+      <stop offset="100%" stop-color="#A55B20" />
+    </linearGradient>
+
+    <!-- Soft Drop Shadow -->
+    <filter id="softShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#230E05" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <!-- Outer Rounded Badge (Emberly Signature Disc) -->
+  <circle cx="256" cy="256" r="236" fill="url(#emberGradient)" />
+  <!-- Delicate Inner Rim Stroke -->
+  <circle cx="256" cy="256" r="233" fill="none" stroke="url(#rimLight)" stroke-width="6" />
+
+  <!-- Coffee & Ember Graphic Group with Depth -->
+  <g filter="url(#softShadow)">
+    <!-- Saucer / Base Plate -->
+    <rect x="110" y="376" width="272" height="24" rx="12" fill="#FDF8F2" />
+    <rect x="146" y="382" width="200" height="6" rx="3" fill="#E8DDD0" opacity="0.6" />
+
+    <!-- Cup Handle -->
+    <path d="M 330 236 C 395 236 414 272 414 300 C 414 334 382 354 330 354" 
+          fill="none" 
+          stroke="#FDF8F2" 
+          stroke-width="26" 
+          stroke-linecap="round" />
+
+    <!-- Cup Body -->
+    <path d="M 136 216 H 356 C 356 312 322 368 246 368 C 170 368 136 312 136 216 Z" 
+          fill="#FDF8F2" />
+
+    <!-- Coffee Crema Liquid Fill (Top Opening) -->
+    <ellipse cx="246" cy="220" rx="96" ry="18" fill="url(#cremaGrad)" />
+    <!-- Espresso Core Depth -->
+    <ellipse cx="246" cy="222" rx="82" ry="12" fill="#421E0B" />
+    <!-- Delicate Crema Foam Heart / Latte Art Leaf -->
+    <path d="M 246 214 C 238 220 238 226 246 230 C 254 226 254 220 246 214 Z" fill="#FDF8F2" opacity="0.85" />
+
+    <!-- Elegant Steam Wisps Rising from Fresh Brew -->
+    <!-- Center Steam -->
+    <path d="M 246 182 C 234 154 258 134 246 106" 
+          fill="none" 
+          stroke="#FDF8F2" 
+          stroke-width="14" 
+          stroke-linecap="round" />
+    <!-- Left Steam -->
+    <path d="M 194 186 C 184 164 204 148 196 126" 
+          fill="none" 
+          stroke="#FDF8F2" 
+          stroke-width="11" 
+          stroke-linecap="round" 
+          opacity="0.9" />
+    <!-- Right Steam -->
+    <path d="M 298 186 C 308 164 288 148 296 126" 
+          fill="none" 
+          stroke="#FDF8F2" 
+          stroke-width="11" 
+          stroke-linecap="round" 
+          opacity="0.9" />
+
+    <!-- Ember Star Sparks (Emberly Signature Golden Glow) -->
+    <!-- Primary Ember Spark -->
+    <path d="M 354 84 Q 354 108 378 108 Q 354 108 354 132 Q 354 108 330 108 Q 354 108 354 84 Z" 
+          fill="url(#emberSpark)" />
+    <!-- Secondary Micro Spark -->
+    <path d="M 138 126 Q 138 138 150 138 Q 138 138 138 150 Q 138 138 126 138 Q 138 138 138 126 Z" 
+          fill="url(#emberSpark)" 
+          opacity="0.9" />
+  </g>
+</svg>

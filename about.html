@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Emberly — Roaster-to-Gear Story &amp; Bench Testing</title>
+  <meta name="description" content="Discover Emberly's roaster-to-gear story, our Seattle bench-testing methodology, our barista team, and our commitment to sustainable lifetime coffee equipment." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Phosphor Icons CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- Accessible Skip-to-Content Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========================================================================
+       MASTER NAVIGATION HEADER
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Emberly Homepage">
+        <span class="brand-logo-mark"><i class="ph ph-coffee"></i></span>
+        <span>Emberly</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <div class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </div>
+        <div class="nav-item">
+          <a href="about.html" class="nav-link active" aria-current="page">About</a>
+        </div>
+        <div class="nav-item dropdown">
+          <a href="services.html" class="nav-link">
+            Services <i class="ph ph-caret-down" style="font-size: 0.85rem;"></i>
+          </a>
+          <ul class="nav-dropdown-menu" aria-label="Services Submenu">
+            <li>
+              <a href="services.html#shop" class="dropdown-link">
+                <i class="ph ph-storefront"></i>
+                <span>Gear Shop &amp; Filters</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html#consultations" class="dropdown-link">
+                <i class="ph ph-chats-circle"></i>
+                <span>Brew Consultations</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html#servicing" class="dropdown-link">
+                <i class="ph ph-wrench"></i>
+                <span>Equipment Servicing</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html#subscriptions" class="dropdown-link">
+                <i class="ph ph-repeat"></i>
+                <span>Bean &amp; Filter Subscriptions</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html#shipping-returns" class="dropdown-link">
+                <i class="ph ph-truck"></i>
+                <span>Shipping &amp; Returns Policy</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="cart-btn-trigger" id="cart-nav-trigger" aria-label="Open Cart Drawer" title="Open Cart">
+          <i class="ph ph-shopping-bag"></i>
+          <span class="cart-badge-count tabular-nums" id="cart-nav-badge" style="display: none;">0</span>
+        </button>
+
+        <a href="auth.html" class="btn btn-secondary btn-sm nav-auth-btn" id="nav-auth-link">
+          <i class="ph ph-sign-in"></i> Login
+        </a>
+
+        <button type="button" class="menu-toggle-btn" aria-label="Toggle Navigation Menu">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-nav-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-logo-mark"><i class="ph ph-coffee"></i></span>
+        <span>Emberly</span>
+      </a>
+      <button type="button" class="drawer-close-btn" aria-label="Close Mobile Navigation">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <ul class="mobile-nav-links">
+      <li class="mobile-nav-item">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="about.html" class="mobile-nav-link" style="color: var(--color-accent); font-weight: 700;">About</a>
+      </li>
+      <li class="mobile-nav-item">
+        <button type="button" class="mobile-nav-link mobile-accordion-toggle" aria-expanded="false">
+          <span>Services</span>
+          <i class="ph ph-caret-down"></i>
+        </button>
+        <ul class="mobile-sub-menu">
+          <li><a href="services.html#shop" class="mobile-sub-link"><i class="ph ph-storefront"></i> Gear Shop &amp; Filters</a></li>
+          <li><a href="services.html#consultations" class="mobile-sub-link"><i class="ph ph-chats-circle"></i> Brew Consultations</a></li>
+          <li><a href="services.html#servicing" class="mobile-sub-link"><i class="ph ph-wrench"></i> Equipment Servicing</a></li>
+          <li><a href="services.html#subscriptions" class="mobile-sub-link"><i class="ph ph-repeat"></i> Subscriptions</a></li>
+          <li><a href="services.html#shipping-returns" class="mobile-sub-link"><i class="ph ph-truck"></i> Shipping &amp; Returns</a></li>
+        </ul>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </li>
+    </ul>
+
+    <div class="mobile-nav-footer">
+      <a href="auth.html" class="btn btn-primary" id="mobile-auth-btn" style="width: 100%;">
+        <i class="ph ph-user"></i> Login / My Account
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       MAIN ABOUT CONTENT
+       ======================================================================== -->
+  <main id="main-content">
+    <!-- SECTION 1: ABOUT HERO -->
+    <section class="page-hero" aria-labelledby="about-hero-title">
+      <div class="container">
+        <span class="eyebrow" style="color: var(--color-accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.82rem;">
+          Our Provenance &amp; Practice
+        </span>
+        <h1 id="about-hero-title">From Green Sourcing to the Final Micron.</h1>
+        <p>
+          We began as coffee roasters frustrated by equipment tolerances that choked delicate micro-lots. Today, Emberly engineers tools that translate terroir faithfully into the cup.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ROASTER-TO-GEAR STORY -->
+    <section class="section" aria-labelledby="story-heading">
+      <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12); align-items: center;">
+        <div style="border-radius: var(--radius); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow);">
+          <img src="https://images.unsplash.com/photo-1579533555864-545dcdff5a43?auto=format&fit=crop&w=1000&q=80" alt="Precision espresso machine on a wooden bench" loading="lazy" />
+        </div>
+
+        <div>
+          <span class="eyebrow">The Origin Story</span>
+          <h2 id="story-heading">The Obsession with Burr Alignment</h2>
+          <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px;">
+            In 2021, while cupping experimental anaerobic coffees from Huila, Colombia, our cupping team noticed sharp differences between two identical commercial grinders. One cup displayed pristine peach and bergamot; the second was muted, bitter, and muddy.
+          </p>
+          <p style="font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">
+            A dial indicator revealed the truth: a 45-micron axial wobble in the burr carrier was generating microscopic fines that ruined extraction uniformity. Standard consumer gear wasn’t built to the aerospace tolerances required for modern light roasts.
+          </p>
+          <p style="font-size: 0.95rem; line-height: 1.7;">
+            We established the Emberly bench laboratory in Seattle to tear down, rebuild, and re-engineer coffee gear from the carrier shims up. Today, every piece in our shop represents that relentless standard.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: BENCH-TESTING & SOURCING METHOD -->
+    <section class="section section-alt" aria-labelledby="testing-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Rigorous Bench Protocol</span>
+          <h2 id="testing-heading">How Every Machine is Qualified</h2>
+          <p>
+            We do not sell gear straight from factory shipping crates. Every unit undergoes multi-point bench calibration before receiving its serial certification seal.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-8);">
+          <div style="background: var(--color-secondary-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space-8); box-shadow: var(--shadow); text-align: center;">
+            <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--color-accent-subtle); color: var(--color-accent-hover); display: inline-flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 16px;">
+              <i class="ph ph-compass"></i>
+            </div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 8px;">1. Dial Runout Verification</h3>
+            <p style="font-size: 0.92rem; line-height: 1.6;">
+              Burr carriers are spun on granite surface plates with Mitutoyo indicators. We correct axial runout to &le;2.5 microns using brass micro-shims before motor burn-in.
+            </p>
+            <span class="badge badge-accent" style="margin-top: 12px; font-size: 0.72rem;">Placeholder Bench Claim</span>
+          </div>
+
+          <div style="background: var(--color-secondary-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space-8); box-shadow: var(--shadow); text-align: center;">
+            <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--color-accent-subtle); color: var(--color-accent-hover); display: inline-flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 16px;">
+              <i class="ph ph-thermometer-hot"></i>
+            </div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 8px;">2. PID Thermal Logging</h3>
+            <p style="font-size: 0.92rem; line-height: 1.6;">
+              Espresso boilers run 100 consecutive 27-second simulated extractions through an automated Scace-2 thermofilter device, logging water stability to within &plusmn;0.2&deg;C.
+            </p>
+            <span class="badge badge-accent" style="margin-top: 12px; font-size: 0.72rem;">Placeholder Bench Claim</span>
+          </div>
+
+          <div style="background: var(--color-secondary-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space-8); box-shadow: var(--shadow); text-align: center;">
+            <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--color-accent-subtle); color: var(--color-accent-hover); display: inline-flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 16px;">
+              <i class="ph ph-chart-line-up"></i>
+            </div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 8px;">3. Particle Diffraction Scan</h3>
+            <p style="font-size: 0.92rem; line-height: 1.6;">
+              Test doses are imaged with optical particle-size analyzers to chart unimodal distribution curves, verifying minimal fines migration below 80 microns.
+            </p>
+            <span class="badge badge-accent" style="margin-top: 12px; font-size: 0.72rem;">Placeholder Bench Claim</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 24px; text-align: center; font-size: 0.85rem; color: var(--color-text-muted);">
+          <em>Disclaimer:</em> All technical testing claims, tolerances, and calibration methods described above are demo placeholders illustrating our fictional engineering ethos.
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: BARISTA & ENGINEERING TEAM -->
+    <section class="section" aria-labelledby="team-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">The Lab Collective</span>
+          <h2 id="team-heading">Meet the Baristas &amp; Bench Engineers</h2>
+          <p>
+            Our multidisciplinary team spans licensed Q-Arabica graders, precision machinists, and national brewing competitors.
+          </p>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-avatar">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Silvia Lindquist, Head of Extraction & Quality" />
+            </div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 4px;">Silvia Lindquist</h3>
+            <span style="font-size: 0.85rem; color: var(--color-accent); font-weight: 600; margin-bottom: 12px;">Head of Extraction &amp; Q-Grading</span>
+            <p style="font-size: 0.9rem; line-height: 1.5;">
+              Licensed SCA Q-Grader with over 12 years cupping micro-lot coffees across East Africa and Central America. Oversees sensory correlation testing.
+            </p>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&crop=faces&w=400&h=400&q=80" alt="Tomas Vane, Lead Mechanical Engineer" />
+            </div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 4px;">Tomas Vane</h3>
+            <span style="font-size: 0.85rem; color: var(--color-accent); font-weight: 600; margin-bottom: 12px;">Chief Mechanical Metrologist</span>
+            <p style="font-size: 0.9rem; line-height: 1.5;">
+              Former precision aerospace toolmaker turned coffee gear fanatic. Calibrates burr carrier runout, needle flow valves, and PID thermal feedback loops.
+            </p>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Maya Chen, Director of Sensory Education" />
+            </div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 4px;">Maya Chen</h3>
+            <span style="font-size: 0.85rem; color: var(--color-accent); font-weight: 600; margin-bottom: 12px;">Director of Consultations &amp; Education</span>
+            <p style="font-size: 0.9rem; line-height: 1.5;">
+              Two-time Brewers Cup semifinalist. Leads 1-on-1 virtual brew consultations and authors our monthly origin grind-size recipe cards.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: SUSTAINABILITY & ETHICAL ENGINEERING -->
+    <section class="section section-dark" aria-labelledby="sustainability-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow" style="color: var(--color-accent);">Enduring Craft</span>
+          <h2 id="sustainability-heading" style="color: var(--color-secondary);">Built for 20 Years, Not 20 Months</h2>
+          <p style="color: rgba(247, 243, 238, 0.75);">
+            We reject planned obsolescence. Every screw, seal, and burr set is individually replaceable with standard metric workshop tools.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-8); text-align: center;">
+          <div>
+            <i class="ph ph-wrench" style="font-size: 2.2rem; color: var(--color-accent); margin-bottom: 12px; display: inline-block;"></i>
+            <h3 style="font-size: 1.25rem; color: var(--color-secondary); margin-bottom: 8px;">100% Right-to-Repair</h3>
+            <p style="font-size: 0.9rem; color: rgba(247, 243, 238, 0.7);">
+              We supply open CAD schematics, repair manuals, and replacement parts directly to home baristas at fair non-inflated prices.
+            </p>
+          </div>
+          <div>
+            <i class="ph ph-leaf" style="font-size: 2.2rem; color: var(--color-accent); margin-bottom: 12px; display: inline-block;"></i>
+            <h3 style="font-size: 1.25rem; color: var(--color-secondary); margin-bottom: 8px;">Zero-Styrofoam Packaging</h3>
+            <p style="font-size: 0.9rem; color: rgba(247, 243, 238, 0.7);">
+              Machines ship in molded unbleached bamboo pulp cushioning and soy-ink printed corrugated cardboard.
+            </p>
+          </div>
+          <div>
+            <i class="ph ph-recycle" style="font-size: 2.2rem; color: var(--color-accent); margin-bottom: 12px; display: inline-block;"></i>
+            <h3 style="font-size: 1.25rem; color: var(--color-secondary); margin-bottom: 8px;">Burr Sharpening Buyback</h3>
+            <p style="font-size: 0.9rem; color: rgba(247, 243, 238, 0.7);">
+              Return dull burrs to our Seattle lab for factory regrinding and receive credit toward your next titanium replacement set.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: CTA BANNER -->
+    <section class="section" aria-labelledby="cta-heading">
+      <div class="container" style="text-align: center;">
+        <h2 id="cta-heading" style="margin-bottom: 16px;">Ready to Elevate Your Daily Extraction?</h2>
+        <p style="max-width: 600px; margin: 0 auto 32px auto; font-size: 1.05rem;">
+          Explore our complete catalog of precision grinders, dual-boiler profilers, and artisan drippers, or book a 1-on-1 virtual consultation with our lab baristas.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="services.html#shop" class="btn btn-primary btn-lg">
+            <i class="ph ph-storefront"></i> Browse Gear Shop
+          </a>
+          <a href="services.html#consultations" class="btn btn-secondary btn-lg">
+            <i class="ph ph-calendar"></i> Book Brew Consultation
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       MASTER FOOTER
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="color: var(--color-secondary); margin-bottom: 12px;">
+            <span class="brand-logo-mark" style="background: var(--color-accent); color: #FFF;"><i class="ph ph-coffee"></i></span>
+            <span>Emberly</span>
+          </a>
+          <p>
+            Bench-calibrated coffee equipment for home baristas and roaster laboratories. Engineered for thermal stability, sub-micron uniformity, and enduring repairability.
+          </p>
+          <div class="footer-social-row">
+            <a href="#" class="footer-social-btn" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="Twitter / X"><i class="ph ph-x-logo"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About &amp; Testing Story</a></li>
+            <li><a href="services.html#shop">Specialty Gear Shop</a></li>
+            <li><a href="services.html#consultations">Brew Consultations</a></li>
+            <li><a href="contact.html">Contact &amp; Showroom</a></li>
+            <li><a href="auth.html">Account Login</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services &amp; Care</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#servicing">Burr Alignment &amp; Servicing</a></li>
+            <li><a href="services.html#subscriptions">Bean &amp; Filter Subscriptions</a></li>
+            <li><a href="services.html#shipping-returns">Shipping &amp; Returns Policy</a></li>
+            <li><a href="services.html#faq">Equipment FAQ &amp; Manuals</a></li>
+            <li><a href="contact.html">Track a Demo Order</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Seattle Bench Lab</h4>
+          <p>
+            402 Pike Street, Suite 800<br />
+            Seattle, WA 98101<br />
+            support@emberlylab.com<br />
+            +1 (206) 555-0194
+          </p>
+          <div style="font-size: 0.8rem; color: var(--color-accent);">
+            <i class="ph ph-clock"></i> Mon&ndash;Fri 8am&ndash;6pm PST
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-disclosure">
+          <strong>Disclosure:</strong> Emberly is a fictional specialty coffee demo brand created for demonstration purposes. All products, specifications, prices, stock levels, reviews, and testing claims are placeholder demo data.
+        </p>
+        <p class="footer-copyright">
+          &copy; 2026 Emberly Coffee Gear Lab. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer & Account Panel Modals -->
+  <div class="cart-drawer-backdrop" id="cart-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <h3><i class="ph ph-shopping-bag"></i> Your Lab Cart</h3>
+      <button type="button" class="drawer-close-btn" id="cart-close-btn" aria-label="Close Shopping Cart"><i class="ph ph-x"></i></button>
+    </div>
+    <div class="cart-drawer-body" id="cart-drawer-content"></div>
+    <div class="cart-drawer-footer" id="cart-drawer-footer"></div>
+  </aside>
+
+  <div class="account-drawer-backdrop" id="account-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="account-drawer" id="account-drawer" role="dialog" aria-modal="true" aria-label="My Account Panel">
+    <div class="account-drawer-header">
+      <h3 style="font-size: 1.35rem; display: flex; align-items: center; gap: 8px;"><i class="ph ph-user-circle"></i> My Account</h3>
+      <button type="button" class="drawer-close-btn" id="account-close-btn" aria-label="Close My Account Panel"><i class="ph ph-x"></i></button>
+    </div>
+    <div class="account-tabs-nav" role="tablist">
+      <button type="button" class="account-tab-btn active" data-target="pane-orders" role="tab">Orders</button>
+      <button type="button" class="account-tab-btn" data-target="pane-saved" role="tab">Saved Gear</button>
+      <button type="button" class="account-tab-btn" data-target="pane-subs" role="tab">Subscriptions</button>
+      <button type="button" class="account-tab-btn" data-target="pane-profile" role="tab">Profile</button>
+    </div>
+    <div class="account-drawer-body">
+      <div class="account-tab-pane active" id="pane-orders"><div id="account-orders-list"></div></div>
+      <div class="account-tab-pane" id="pane-saved"><div id="account-wishlist-grid"></div></div>
+      <div class="account-tab-pane" id="pane-subs"><div id="account-subscription-pane"></div></div>
+      <div class="account-tab-pane" id="pane-profile">
+        <form id="account-profile-form">
+          <div class="form-group"><label class="form-label" for="profile-name">Full Name</label><input type="text" id="profile-name" class="form-input" required /></div>
+          <div class="form-group"><label class="form-label" for="profile-email">Email Address</label><input type="email" id="profile-email" class="form-input" required /></div>
+          <div class="form-group"><label class="form-label" for="profile-street">Shipping Street</label><input type="text" id="profile-street" class="form-input" /></div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="form-group"><label class="form-label" for="profile-city">City</label><input type="text" id="profile-city" class="form-input" /></div>
+            <div class="form-group"><label class="form-label" for="profile-zip">Postal Code</label><input type="text" id="profile-zip" class="form-input" /></div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">Save Profile Changes</button>
+          <button type="button" class="btn btn-secondary" id="account-logout-btn" style="width: 100%; margin-top: 12px; color: var(--color-error);"><i class="ph ph-sign-out"></i> Sign Out of Demo Session</button>
+        </form>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Quick View Modal Container -->
+  <div class="modal-backdrop" id="quick-view-modal" role="dialog" aria-modal="true" aria-label="Product Quick View Modal">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" aria-label="Close product quick view"><i class="ph ph-x"></i></button>
+      <div id="quick-view-dialog-content"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/viewer360.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/account.js"></script>
+  <script src="assets/js/shop.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emberly — Specialty Coffee Gear & Precision Extraction</title>
+  <meta name="description" content="Emberly designs and bench-tests specialty coffee gear. Explore 360° grinder views, our interactive brew-method finder, grind-size guide, and curated gear." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Phosphor Icons CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- JSON-LD Structured Data: Organization & Featured Gear Catalog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://emberlygear.com/#organization",
+        "name": "Emberly Specialty Coffee Gear",
+        "url": "https://emberlygear.com",
+        "logo": "https://images.unsplash.com/photo-1589396575653-c09c794ff6a6?auto=format&fit=crop&w=400&q=80",
+        "description": "Artisan specialty coffee equipment bench-tested for micron uniformity and thermal stability.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "402 Pike Street, Suite 800",
+          "addressLocality": "Seattle",
+          "addressRegion": "WA",
+          "postalCode": "98101",
+          "addressCountry": "US"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://emberlygear.com/#website",
+        "url": "https://emberlygear.com",
+        "name": "Emberly Coffee Lab",
+        "publisher": { "@id": "https://emberlygear.com/#organization" }
+      },
+      {
+        "@type": "ItemList",
+        "name": "Featured Specialty Coffee Gear",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "Product",
+              "name": "Aethel 64 Precision Flat Burr Grinder",
+              "description": "64mm Diamond-Like Carbon Burrs with Sub-Micron Stepless Micrometer Dial.",
+              "image": "https://images.unsplash.com/photo-1589396575653-c09c794ff6a6?auto=format&fit=crop&w=900&q=80",
+              "offers": {
+                "@type": "Offer",
+                "price": "585.00",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "128"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "Product",
+              "name": "Kallio Artisanal Thermal Profiler",
+              "description": "Dual Stainless Steel Boilers with Saturated Group and Flow Profiling Paddle.",
+              "image": "https://images.unsplash.com/photo-1509785307050-d4066910ec1e?auto=format&fit=crop&w=900&q=80",
+              "offers": {
+                "@type": "Offer",
+                "price": "1650.00",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "64"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "Product",
+              "name": "Vapour Precision Variable Temperature Kettle",
+              "description": "Gooseneck Spout with Counterbalanced Walnut Handle and Strix PID Base.",
+              "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=900&q=80",
+              "offers": {
+                "@type": "Offer",
+                "price": "165.00",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "95"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Accessible Skip-to-Content Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========================================================================
+       MASTER NAVIGATION HEADER (Shared across index, about, services, contact)
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <!-- Logo Left -->
+      <a href="index.html" class="brand-logo" aria-label="Emberly Homepage">
+        <span class="brand-logo-mark"><i class="ph ph-coffee"></i></span>
+        <span>Emberly</span>
+      </a>
+
+      <!-- Desktop Navigation Links Center -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <div class="nav-item">
+          <a href="index.html" class="nav-link active" aria-current="page">Home</a>
+        </div>
+        <div class="nav-item">
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-item dropdown">
+          <a href="services.html" class="nav-link">
+            Services <i class="ph ph-caret-down" style="font-size: 0.85rem;"></i>
+          </a>
+          <ul class="nav-dropdown-menu" aria-label="Services Submenu">
+            <li>
+              <a href="services.html#shop" class="dropdown-link">
+                <i class="ph ph-storefront"></i>
+                <span>Gear Shop &amp; Filters</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html#consultations" class="dropdown-link">
+                <i class="ph ph-chats-circle"></i>
+                <span>Brew Consultations</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html#servicing" class="dropdown-link">
+                <i class="ph ph-wrench"></i>
+                <span>Equipment Servicing</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html#subscriptions" class="dropdown-link">
+                <i class="ph ph-repeat"></i>
+                <span>Bean &amp; Filter Subscriptions</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html#shipping-returns" class="dropdown-link">
+                <i class="ph ph-truck"></i>
+                <span>Shipping &amp; Returns Policy</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+      </nav>
+
+      <!-- Nav Actions Right -->
+      <div class="nav-actions">
+        <button type="button" class="cart-btn-trigger" id="cart-nav-trigger" aria-label="Open Cart Drawer" title="Open Cart">
+          <i class="ph ph-shopping-bag"></i>
+          <span class="cart-badge-count tabular-nums" id="cart-nav-badge" style="display: none;">0</span>
+        </button>
+
+        <a href="auth.html" class="btn btn-secondary btn-sm nav-auth-btn" id="nav-auth-link">
+          <i class="ph ph-sign-in"></i> Login
+        </a>
+
+        <!-- Hamburger Button (<= 1024px) -->
+        <button type="button" class="menu-toggle-btn" aria-label="Toggle Navigation Menu">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer (<= 1024px) -->
+  <div class="mobile-nav-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-logo-mark"><i class="ph ph-coffee"></i></span>
+        <span>Emberly</span>
+      </a>
+      <button type="button" class="drawer-close-btn" aria-label="Close Mobile Navigation">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <ul class="mobile-nav-links">
+      <li class="mobile-nav-item">
+        <a href="index.html" class="mobile-nav-link" style="color: var(--color-accent); font-weight: 700;">Home</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="about.html" class="mobile-nav-link">About</a>
+      </li>
+      <li class="mobile-nav-item">
+        <button type="button" class="mobile-nav-link mobile-accordion-toggle" aria-expanded="false">
+          <span>Services</span>
+          <i class="ph ph-caret-down"></i>
+        </button>
+        <ul class="mobile-sub-menu">
+          <li><a href="services.html#shop" class="mobile-sub-link"><i class="ph ph-storefront"></i> Gear Shop &amp; Filters</a></li>
+          <li><a href="services.html#consultations" class="mobile-sub-link"><i class="ph ph-chats-circle"></i> Brew Consultations</a></li>
+          <li><a href="services.html#servicing" class="mobile-sub-link"><i class="ph ph-wrench"></i> Equipment Servicing</a></li>
+          <li><a href="services.html#subscriptions" class="mobile-sub-link"><i class="ph ph-repeat"></i> Subscriptions</a></li>
+          <li><a href="services.html#shipping-returns" class="mobile-sub-link"><i class="ph ph-truck"></i> Shipping &amp; Returns</a></li>
+        </ul>
+      </li>
+      <li class="mobile-nav-item">
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </li>
+    </ul>
+
+    <div class="mobile-nav-footer">
+      <a href="auth.html" class="btn btn-primary" id="mobile-auth-btn" style="width: 100%;">
+        <i class="ph ph-user"></i> Login / My Account
+      </a>
+      <div style="font-size: 0.8rem; color: var(--color-text-muted); text-align: center;">
+        Seattle Craft Bench Lab · Mon–Sat 8am–6pm
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       MAIN PAGE CONTENT
+       ======================================================================== -->
+  <main id="main-content">
+    <!-- SECTION 1: ANIMATED HERO WITH STEAM / RISING BEANS -->
+    <section class="hero-section" aria-labelledby="hero-heading">
+      <div class="container hero-layout">
+        <div class="hero-content">
+          <span class="eyebrow">Bench-Calibrated Specialty Coffee Gear</span>
+          <h1 id="hero-heading">Engineered for the Relentless Pursuit of the Cup.</h1>
+          <p class="hero-lead">
+            We build and laboratory-certify precision flat-burr grinders, dual-boiler thermal profilers, and artisan extraction brewers. Designed for sub-micron particle consistency and surgical clarity.
+          </p>
+
+          <div class="hero-actions">
+            <a href="services.html#shop" class="btn btn-primary btn-lg">
+              <i class="ph ph-storefront"></i> Explore Gear Shop
+            </a>
+            <a href="#brew-finder" class="btn btn-secondary btn-lg">
+              <i class="ph ph-sliders"></i> Brew-Method Finder
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hero-stat-item">
+              <div class="stat-num tabular-nums">&plusmn;0.2&deg;C</div>
+              <div class="stat-label">PID Thermal Stability</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="stat-num tabular-nums">&lt;0.1g</div>
+              <div class="stat-label">Single-Dose Retention</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="stat-num tabular-nums">2.5 &mu;m</div>
+              <div class="stat-label">Radial Burr Runout</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Card with Ambient Steam Animation -->
+        <div class="hero-visual-card">
+          <div class="hero-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=1000&q=80" alt="Precision espresso extraction with rich crema and warm timber details" />
+            <!-- Animated Steam Plumes -->
+            <div class="steam-container" aria-hidden="true">
+              <div class="steam-plume p1"></div>
+              <div class="steam-plume p2"></div>
+              <div class="steam-plume p3"></div>
+              <div class="rising-bean b1"></div>
+              <div class="rising-bean b2"></div>
+            </div>
+          </div>
+          <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center;">
+            <div style="text-align: left;">
+              <strong style="font-size: 0.95rem; color: var(--color-primary); display: block;">Seattle Bench Testing Facility</strong>
+              <span style="font-size: 0.8rem; color: var(--color-text-muted);">Calibrated batch #EMB-2026-X</span>
+            </div>
+            <a href="#spotlight-360" class="btn btn-secondary btn-sm">
+              <i class="ph ph-arrows-clockwise"></i> Inspect 360&deg;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: TRUST & CREDIBILITY BAR -->
+    <section class="trust-bar" aria-label="Store Guarantees and Credibility Highlights">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <i class="ph ph-scales"></i>
+          <span class="trust-title">Bench-Tested by Q-Graders</span>
+          <span class="trust-desc">Every piece aligned and runout-measured</span>
+        </div>
+        <div class="trust-item">
+          <i class="ph ph-truck"></i>
+          <span class="trust-title">Free Shipping Over $75</span>
+          <span class="trust-desc">Carbon-neutral tracked courier delivery</span>
+        </div>
+        <div class="trust-item">
+          <i class="ph ph-shield-check"></i>
+          <span class="trust-title">2-Year Direct Warranty</span>
+          <span class="trust-desc">Full repair support and original parts stock</span>
+        </div>
+        <div class="trust-item">
+          <i class="ph ph-arrows-clockwise"></i>
+          <span class="trust-title">30-Day Extraction Trial</span>
+          <span class="trust-desc">Love your extraction or return free</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: FEATURED GEAR GRID -->
+    <section class="section" id="featured-gear" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Curated Flagships</span>
+          <h2 id="featured-heading">Engineered for Uncompromising Clarity</h2>
+          <p>
+            Hand-selected equipment tested in our Pacific Northwest laboratory. Every grinder, brewer, and tool is built to unlock nuanced terroir.
+          </p>
+        </div>
+
+        <div class="products-grid" id="home-featured-grid">
+          <!-- Populated dynamically via shop.js with quick-view and add-to-cart -->
+        </div>
+
+        <div style="text-align: center; margin-top: var(--space-12);">
+          <a href="services.html#shop" class="btn btn-primary btn-lg">
+            View All 6 Models in Shop <i class="ph ph-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: SIGNATURE 360° PRODUCT SPOTLIGHT -->
+    <section class="section section-alt" id="spotlight-360" aria-labelledby="spotlight-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">360&deg; Interactive Inspection</span>
+          <h2 id="spotlight-heading">Examine Every Micron Tolerance</h2>
+          <p>
+            Rotate our flagship gear across all 360 degrees. Drag with mouse or finger, press arrow keys, or toggle smooth auto-rotation.
+          </p>
+        </div>
+
+        <!-- Spotlight Model Selector Tabs -->
+        <div class="spotlight-selector" role="tablist">
+          <button type="button" class="spotlight-tab-btn active" data-product="aethel-64-grinder" role="tab" aria-selected="true">
+            <i class="ph ph-sliders"></i> Aethel 64 Flat Burr Grinder
+          </button>
+          <button type="button" class="spotlight-tab-btn" data-product="kallio-thermal-profiler" role="tab" aria-selected="false">
+            <i class="ph ph-gauge"></i> Kallio Dual-Boiler Profiler
+          </button>
+          <button type="button" class="spotlight-tab-btn" data-product="vapour-precision-kettle" role="tab" aria-selected="false">
+            <i class="ph ph-drop"></i> Vapour Variable Kettle
+          </button>
+        </div>
+
+        <!-- 360 Interactive Viewer Canvas Container -->
+        <div class="viewer-360-container" id="home-spotlight-viewer" style="max-width: 840px; margin: 0 auto;">
+          <!-- Rendered dynamically by viewer360.js -->
+        </div>
+
+        <div style="text-align: center; margin-top: var(--space-6);">
+          <p style="font-size: 0.85rem; color: var(--color-text-muted);">
+            <em>Tip:</em> Use keyboard Left (&larr;) and Right (&rarr;) arrow keys for precise 15&deg; step inspections.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: INTERACTIVE BREW-METHOD FINDER -->
+    <section class="section" id="brew-finder" aria-labelledby="finder-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Personalized Lab Builder</span>
+          <h2 id="finder-heading">Find Your Ideal Extraction Kit</h2>
+          <p>
+            Choose your signature brew style and budget. Our algorithm builds a harmonized gear kit and calibrated starting brew recipe.
+          </p>
+        </div>
+
+        <div class="finder-card">
+          <!-- Method Selection Tabs -->
+          <div class="finder-methods-grid" role="group" aria-label="Brew Method Selection">
+            <button type="button" class="finder-method-btn active" data-method="espresso">
+              <i class="ph ph-coffee"></i>
+              <span class="finder-method-title">Espresso</span>
+              <span style="font-size: 0.8rem; color: var(--color-text-muted);">9-Bar High Pressure</span>
+            </button>
+            <button type="button" class="finder-method-btn" data-method="pour-over">
+              <i class="ph ph-funnel"></i>
+              <span class="finder-method-title">Pour-Over</span>
+              <span style="font-size: 0.8rem; color: var(--color-text-muted);">V60 &amp; Flat Wave</span>
+            </button>
+            <button type="button" class="finder-method-btn" data-method="french-press">
+              <i class="ph ph-hourglass-medium"></i>
+              <span class="finder-method-title">French Press</span>
+              <span style="font-size: 0.8rem; color: var(--color-text-muted);">Immersion Clarity</span>
+            </button>
+            <button type="button" class="finder-method-btn" data-method="aeropress">
+              <i class="ph ph-feather"></i>
+              <span class="finder-method-title">AeroPress</span>
+              <span style="font-size: 0.8rem; color: var(--color-text-muted);">Travel &amp; Pressure</span>
+            </button>
+          </div>
+
+          <!-- Experience and Budget Filters -->
+          <div class="finder-filters-row">
+            <div class="form-group" style="margin: 0;">
+              <label class="form-label" for="finder-exp-level">Experience Level</label>
+              <select id="finder-exp-level" class="form-select">
+                <option value="all">All Skill Levels</option>
+                <option value="beginner">Home Enthusiast (Approachable &amp; Forgiving)</option>
+                <option value="pro">Lab Specialist (Precision Micrometer Control)</option>
+              </select>
+            </div>
+            <div class="form-group" style="margin: 0;">
+              <label class="form-label" for="finder-max-budget">Maximum Kit Budget (USD)</label>
+              <input type="number" id="finder-max-budget" class="form-input" placeholder="e.g. 1000" min="50" max="5000" step="50" />
+            </div>
+          </div>
+
+          <!-- Dynamic Output Grid: Recipe Card + Recommended Kit -->
+          <div class="finder-results-layout">
+            <div id="finder-recipe-card">
+              <!-- Populated by finder.js -->
+            </div>
+            <div id="finder-recommended-gear">
+              <!-- Populated by finder.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: INTERACTIVE GRIND-SIZE GUIDE -->
+    <section class="section section-alt" id="grind-guide" aria-labelledby="grind-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Extraction Physics</span>
+          <h2 id="grind-heading">Calibrated Grind-Size Guide</h2>
+          <p>
+            From 100-micron Turkish dust to 1500-micron Cold Brew gravel. Discover particle geometry, drawdown targets, and extraction troubleshooting.
+          </p>
+        </div>
+
+        <div class="grind-guide-card">
+          <!-- 8-Stage Interactive Stepper Nodes -->
+          <div class="grind-stepper-control" role="tablist" aria-label="Grind Size Stages">
+            <button type="button" class="grind-step-node" data-step="0" role="tab">
+              <span class="grind-step-dot">1</span>
+              <span class="grind-step-label">Turkish</span>
+            </button>
+            <button type="button" class="grind-step-node" data-step="1" role="tab">
+              <span class="grind-step-dot">2</span>
+              <span class="grind-step-label">Espresso</span>
+            </button>
+            <button type="button" class="grind-step-node" data-step="2" role="tab">
+              <span class="grind-step-dot">3</span>
+              <span class="grind-step-label">Moka / Aero</span>
+            </button>
+            <button type="button" class="grind-step-node active" data-step="3" role="tab" aria-selected="true">
+              <span class="grind-step-dot">4</span>
+              <span class="grind-step-label">Pour-Over</span>
+            </button>
+            <button type="button" class="grind-step-node" data-step="4" role="tab">
+              <span class="grind-step-dot">5</span>
+              <span class="grind-step-label">Chemex</span>
+            </button>
+            <button type="button" class="grind-step-node" data-step="5" role="tab">
+              <span class="grind-step-dot">6</span>
+              <span class="grind-step-label">French Press</span>
+            </button>
+            <button type="button" class="grind-step-node" data-step="6" role="tab">
+              <span class="grind-step-dot">7</span>
+              <span class="grind-step-label">Cold Brew</span>
+            </button>
+          </div>
+
+          <!-- Accessible Slider Control -->
+          <input type="range" id="grind-slider" class="grind-slider-range" min="0" max="6" value="3" step="1" aria-label="Adjust grind size step" />
+
+          <!-- Dynamic Display Layout -->
+          <div class="grind-display-grid">
+            <!-- Left: Particle SVG Visualization -->
+            <div class="grind-illustration-box">
+              <div class="particle-preview-canvas" id="grind-particle-canvas">
+                <!-- SVG injected dynamically -->
+              </div>
+              <span class="grind-microns-pill tabular-nums" id="grind-microns-display">550 &ndash; 750 &mu;m</span>
+              <p style="font-size: 0.85rem; margin-top: 8px; color: var(--color-text-muted);" id="grind-texture-display">
+                Granulated table sand consistency.
+              </p>
+            </div>
+
+            <!-- Right: Calibration Specs & Troubleshooting Notes -->
+            <div class="grind-specs-panel">
+              <div class="grind-spec-row">
+                <span class="grind-spec-title">Particle Size Tier</span>
+                <span class="grind-spec-desc" id="grind-name-display" style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 540;">
+                  Medium (Standard Pour-Over)
+                </span>
+              </div>
+              <div class="grind-spec-row">
+                <span class="grind-spec-title">Matching Brew Methods</span>
+                <span class="grind-spec-desc" id="grind-methods-display">Nordic Wave, Hario V60, Origami Dripper</span>
+              </div>
+              <div class="grind-spec-row">
+                <span class="grind-spec-title">Target Extraction Drawdown</span>
+                <span class="grind-spec-desc tabular-nums" id="grind-time-display">2m 45s &ndash; 3m 30s</span>
+              </div>
+
+              <!-- Troubleshooting Alert Box -->
+              <div class="grind-trouble-alert" id="grind-trouble-display">
+                <strong>Extraction Troubleshooting:</strong> Sour or watery? Move finer. Bitter or astringent? Move coarser.
+              </div>
+
+              <!-- Matching Grinder Recommendations -->
+              <div>
+                <span class="grind-spec-title">Calibrated Grinders from Shop:</span>
+                <div id="grind-matched-grinders">
+                  <!-- Populated by finder.js -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--color-border); text-align: center; font-size: 0.82rem; color: var(--color-text-muted);">
+            <i class="ph ph-info"></i> <strong>Note:</strong> Micron diameters and click counts are calibrated lab starting points. Dial-in variations occur depending on bean elevation, roast density, and room humidity.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: ROASTER-TO-GEAR PHILOSOPHY & ABOUT TEASER -->
+    <section class="section" aria-labelledby="philosophy-heading">
+      <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12); align-items: center;">
+        <div>
+          <span class="eyebrow">Artisan Bench Standards</span>
+          <h2 id="philosophy-heading">Why Tolerances Matter in the Slurry</h2>
+          <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px;">
+            A single 20-micron wobble in a grinder's inner carrier produces excessive fines dust that chokes your filter paper. A 1.5&deg;C thermal swing in a boiler dulls the bright malic acidity of high-grown washed coffees.
+          </p>
+          <p style="font-size: 0.95rem; line-height: 1.7; margin-bottom: 24px;">
+            At Emberly, we operate like an aerospace skunkworks for coffee roasters. Every machine is measured on granite surface plates with dial test indicators before shipping to your bench.
+          </p>
+          <a href="about.html" class="btn btn-secondary">
+            Read Our Roaster-to-Gear Story <i class="ph ph-arrow-right"></i>
+          </a>
+        </div>
+        <div>
+          <div style="border-radius: var(--radius); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow);">
+            <img src="https://images.unsplash.com/photo-1750284172912-b50e575c1766?auto=format&fit=crop&w=1000&h=750&q=80" alt="Barista dialing in a shot on a precision espresso machine" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: EDITORIAL TESTIMONIALS -->
+    <section class="section section-alt" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Field Verified</span>
+          <h2 id="testimonials-heading">Trusted by Roasters &amp; Champions</h2>
+          <p>
+            Hear what competitive baristas, lab technicians, and home enthusiasts say about their extractions with Emberly equipment.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <p class="testimonial-quote">
+              &ldquo;The Aethel 64 replaced two commercial grinders on our tasting bar. Unimodal particle curves that finally do justice to natural geshas.&rdquo;
+            </p>
+            <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&h=160&q=80&crop=faces" alt="Anders Lindqvist" loading="lazy" />
+            <span class="testimonial-author">Anders Lindqvist</span>
+            <span class="testimonial-role">Head Roaster, Nordic Fika Lab</span>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <p class="testimonial-quote">
+              &ldquo;The flow paddle on the Kallio gives manual profiling feel with commercial PID temperature repeatability. Absolute centerpiece on my counter.&rdquo;
+            </p>
+            <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&h=160&q=80&crop=faces" alt="Claire Beauchamp" loading="lazy" />
+            <span class="testimonial-author">Claire Beauchamp</span>
+            <span class="testimonial-role">2025 Regional Brewers Cup Finalist</span>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <p class="testimonial-quote">
+              &ldquo;Emberly’s customer service bench recalibrated my burrs after two years of heavy use in under 48 hours. You simply don’t get this support elsewhere.&rdquo;
+            </p>
+            <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&h=160&q=80&crop=faces" alt="Marcus Sterling" loading="lazy" />
+            <span class="testimonial-author">Marcus Sterling</span>
+            <span class="testimonial-role">Coffee Enthusiast &amp; Collector</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: NEWSLETTER DISPATCHES -->
+    <section class="section" aria-labelledby="newsletter-heading">
+      <div class="container">
+        <div class="newsletter-card">
+          <span class="badge badge-accent" style="margin-bottom: 12px;">Monthly Lab Dispatches</span>
+          <h2 id="newsletter-heading">Receive Our Cupping &amp; Grind Data</h2>
+          <p>
+            Subscribe for monthly micron distribution charts, seasonal origin dial-in notes, and priority early access to limited batch equipment drops.
+          </p>
+          <form class="newsletter-form" id="newsletter-form" aria-label="Newsletter Subscription Form">
+            <!-- Mailchimp Embed Code Comment: sync with Audience ID MC_EMBERLY_LAB_2026 -->
+            <input type="email" id="newsletter-email" class="newsletter-input" placeholder="Enter your email address" required />
+            <button type="submit" class="btn btn-accent btn-lg">
+              Subscribe Dispatches
+            </button>
+          </form>
+          <span style="display: block; margin-top: 12px; font-size: 0.78rem; color: rgba(247, 243, 238, 0.5);">
+            No spam. Only deep-dive extraction science and equipment care notes. Unsubscribe anytime.
+          </span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       MASTER FOOTER
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Philosophy -->
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="color: var(--color-secondary); margin-bottom: 12px;">
+            <span class="brand-logo-mark" style="background: var(--color-accent); color: #FFF;"><i class="ph ph-coffee"></i></span>
+            <span>Emberly</span>
+          </a>
+          <p>
+            Bench-calibrated coffee equipment for home baristas and roaster laboratories. Engineered for thermal stability, sub-micron uniformity, and enduring repairability.
+          </p>
+          <div class="footer-social-row">
+            <a href="#" class="footer-social-btn" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="Twitter / X"><i class="ph ph-x-logo"></i></a>
+            <a href="#" class="footer-social-btn" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About &amp; Testing Story</a></li>
+            <li><a href="services.html#shop">Specialty Gear Shop</a></li>
+            <li><a href="services.html#consultations">Brew Consultations</a></li>
+            <li><a href="contact.html">Contact &amp; Showroom</a></li>
+            <li><a href="auth.html">Account Login</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services & Support -->
+        <div class="footer-col">
+          <h4>Services &amp; Care</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#servicing">Burr Alignment &amp; Servicing</a></li>
+            <li><a href="services.html#subscriptions">Bean &amp; Filter Subscriptions</a></li>
+            <li><a href="services.html#shipping-returns">Shipping &amp; Returns Policy</a></li>
+            <li><a href="services.html#faq">Equipment FAQ &amp; Manuals</a></li>
+            <li><a href="contact.html">Track a Demo Order</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Laboratory Contact -->
+        <div class="footer-col">
+          <h4>Seattle Bench Lab</h4>
+          <p>
+            402 Pike Street, Suite 800<br />
+            Seattle, WA 98101<br />
+            support@emberlylab.com<br />
+            +1 (206) 555-0194
+          </p>
+          <div style="font-size: 0.8rem; color: var(--color-accent);">
+            <i class="ph ph-clock"></i> Mon&ndash;Fri 8am&ndash;6pm PST
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom & Required Disclosure Line -->
+      <div class="footer-bottom">
+        <p class="footer-disclosure">
+          <strong>Disclosure:</strong> Emberly is a fictional specialty coffee demo brand created for demonstration purposes. All products, specifications, prices, stock levels, reviews, and testing claims are placeholder demo data.
+        </p>
+        <p class="footer-copyright">
+          &copy; 2026 Emberly Coffee Gear Lab. All rights reserved. Built with semantic HTML, vanilla CSS, and modern JavaScript.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       CART SLIDE-IN DRAWER & MULTI-STEP CHECKOUT
+       ======================================================================== -->
+  <div class="cart-drawer-backdrop" id="cart-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <h3><i class="ph ph-shopping-bag"></i> Your Lab Cart</h3>
+      <button type="button" class="drawer-close-btn" id="cart-close-btn" aria-label="Close Shopping Cart">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <div class="cart-drawer-body" id="cart-drawer-content">
+      <!-- Populated dynamically by cart.js -->
+    </div>
+
+    <div class="cart-drawer-footer" id="cart-drawer-footer">
+      <!-- Populated dynamically by cart.js -->
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       MY ACCOUNT SLIDE-OVER PANEL (No Dashboard - Page Budget Tradeoff)
+       ======================================================================== -->
+  <div class="account-drawer-backdrop" id="account-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="account-drawer" id="account-drawer" role="dialog" aria-modal="true" aria-label="My Account Panel">
+    <div class="account-drawer-header">
+      <h3 style="font-size: 1.35rem; display: flex; align-items: center; gap: 8px;">
+        <i class="ph ph-user-circle"></i> My Account
+      </h3>
+      <button type="button" class="drawer-close-btn" id="account-close-btn" aria-label="Close My Account Panel">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+
+    <!-- 4 Account Tabs -->
+    <div class="account-tabs-nav" role="tablist">
+      <button type="button" class="account-tab-btn active" data-target="pane-orders" role="tab">Orders</button>
+      <button type="button" class="account-tab-btn" data-target="pane-saved" role="tab">Saved Gear</button>
+      <button type="button" class="account-tab-btn" data-target="pane-subs" role="tab">Subscriptions</button>
+      <button type="button" class="account-tab-btn" data-target="pane-profile" role="tab">Profile</button>
+    </div>
+
+    <div class="account-drawer-body">
+      <!-- Tab 1: Orders -->
+      <div class="account-tab-pane active" id="pane-orders">
+        <div id="account-orders-list"></div>
+      </div>
+
+      <!-- Tab 2: Saved Gear (Wishlist) -->
+      <div class="account-tab-pane" id="pane-saved">
+        <div id="account-wishlist-grid"></div>
+      </div>
+
+      <!-- Tab 3: Subscriptions -->
+      <div class="account-tab-pane" id="pane-subs">
+        <div id="account-subscription-pane"></div>
+      </div>
+
+      <!-- Tab 4: Profile -->
+      <div class="account-tab-pane" id="pane-profile">
+        <form id="account-profile-form">
+          <div class="form-group">
+            <label class="form-label" for="profile-name">Full Name</label>
+            <input type="text" id="profile-name" class="form-input" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="profile-email">Email Address</label>
+            <input type="email" id="profile-email" class="form-input" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="profile-street">Shipping Street</label>
+            <input type="text" id="profile-street" class="form-input" />
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="form-group">
+              <label class="form-label" for="profile-city">City</label>
+              <input type="text" id="profile-city" class="form-input" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="profile-zip">Postal Code</label>
+              <input type="text" id="profile-zip" class="form-input" />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">
+            Save Profile Changes
+          </button>
+          <button type="button" class="btn btn-secondary" id="account-logout-btn" style="width: 100%; margin-top: 12px; color: var(--color-error);">
+            <i class="ph ph-sign-out"></i> Sign Out of Demo Session
+          </button>
+        </form>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       QUICK-VIEW PRODUCT MODAL
+       ======================================================================== -->
+  <div class="modal-backdrop" id="quick-view-modal" role="dialog" aria-modal="true" aria-label="Product Quick View Modal">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" aria-label="Close product quick view">
+        <i class="ph ph-x"></i>
+      </button>
+      <div id="quick-view-dialog-content">
+        <!-- Rendered dynamically by shop.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/viewer360.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/account.js"></script>
+  <script src="assets/js/shop.js"></script>
+  <script src="assets/js/finder.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- 360 Spotlight Initializer Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const spotlightContainer = document.getElementById('home-spotlight-viewer');
+      if (spotlightContainer) {
+        const homeViewer = new Emberly360Viewer(spotlightContainer, {
+          productId: 'aethel-64-grinder',
+          totalFrames: 24,
+          autoRotateSpeed: 110
+        });
+
+        // Tab selection for 360 spotlight
+        document.querySelectorAll('.spotlight-tab-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            document.querySelectorAll('.spotlight-tab-btn').forEach(b => {
+              b.classList.remove('active');
+              b.setAttribute('aria-selected', 'false');
+            });
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
+            const prod = btn.getAttribute('data-product');
+            homeViewer.setProduct(prod);
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
