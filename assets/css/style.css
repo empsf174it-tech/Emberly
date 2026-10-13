@@ -2996,3 +2996,18 @@ h1 em, h2 em { font-style: italic; color: var(--color-accent); }
   .modal-buy-row .cart-qty-group { flex: 1; justify-content: space-between; }
   .modal-perks { grid-template-columns: 1fr; }
 }
+
+/* Back to top */
+.back-to-top {
+  position: fixed; right: 24px; bottom: 24px; z-index: 900;
+  width: 48px; height: 48px; border-radius: 50%; border: none; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; color: #fff;
+  background: linear-gradient(140deg, #A0632E 0%, #7A4520 55%, #5A311A 100%);
+  box-shadow: 0 1px 0 rgba(255,255,255,.18) inset, 0 12px 28px -10px rgba(122,69,32,.75);
+  opacity: 0; visibility: hidden; transform: translateY(16px);
+  transition: opacity .35s var(--ease), transform .35s var(--ease), visibility .35s, box-shadow .3s;
+}
+.back-to-top.show { opacity: 1; visibility: visible; transform: none; }
+.back-to-top:hover { transform: translateY(-3px); box-shadow: 0 1px 0 rgba(255,255,255,.18) inset, 0 18px 34px -12px rgba(122,69,32,.85); }
+@media (max-width: 600px) { .back-to-top { right: 16px; bottom: 16px; width: 44px; height: 44px; } }
